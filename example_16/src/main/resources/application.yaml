@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: example_16
+debug: true
+
+#server:
+#  port: 8081 // if set to 0, it will boot on a random port
+#  servlet:
+#    context-path: /example
+

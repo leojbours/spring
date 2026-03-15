@@ -8,7 +8,7 @@ import { API_BASE_URL } from "./api";
  * Follows the vendor-specific media type format: application/vnd.eazyapp+json;v=1.0
  * Developers can override this in individual requests if needed
  */
-export const DEFAULT_ACCEPT_HEADER = "application/vnd.eazyapp+json;v=1.0";
+export const DEFAULT_ACCEPT_HEADER = "application/vnd.leojbours+json;v=1.0";
 
 /**
  * Create axios instance with default configuration
@@ -204,7 +204,7 @@ httpClient.interceptors.response.use(
  * const response = await withApiVersion('2.0').get('/companies');
  */
 export const withApiVersion = (version) => {
-  const acceptHeader = `application/vnd.eazyapp+json;v=${version}`;
+  const acceptHeader = `application/vnd.leojbours+json;v=${version}`;
   return {
     get: (url, config = {}) =>
       httpClient.get(url, {

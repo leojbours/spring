@@ -17,7 +17,7 @@ export const SUPPORTED_API_VERSIONS = ["1.0", "2.0", "3.0"];
 
 // Helper to generate Accept header value for a specific version
 export const getAcceptHeader = (version = DEFAULT_API_VERSION) =>
-  `application/vnd.eazyapp+json;v=${version}`;
+  `application/vnd.leojbours+json;v=${version}`;
 
 // API Endpoints
 export const API_ENDPOINTS = {

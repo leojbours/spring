@@ -1,6 +1,7 @@
 package com.github.leojbours.jobportal.controller.impl;
 
 import com.github.leojbours.jobportal.controller.CompanyController;
+import com.github.leojbours.jobportal.dto.CompanyDto;
 import com.github.leojbours.jobportal.entity.Company;
 import com.github.leojbours.jobportal.service.CompanyService;
 import java.util.List;
@@ -23,7 +24,7 @@ public class CompanyControllerImpl implements CompanyController {
 
   @Override
   @GetMapping
-  public ResponseEntity<List<Company>> findAll() {
+  public ResponseEntity<List<CompanyDto>> findAll() {
     return ResponseEntity.ok(companyService.findAll());
   }
 }

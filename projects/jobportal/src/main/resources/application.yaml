@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: jobportal
+  datasource:
+    url: jdbc:h2:mem:jobportal
+    driver-class-name: org.h2.Driver
+  sql:
+    init:
+      schema-locations: classpath:sql/jobportal-schema.sql
+      data-locations: classpath:sql/jobportal-data.sql
+  h2:
+    console:
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: none

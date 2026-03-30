@@ -36,7 +36,7 @@ public class Contact {
 
   @ColumnDefault("'NEW'")
   @Column(name = "status", nullable = false, length = 20)
-  private String status;
+  private String status = "NEW";
 
   @Column(name = "subject", nullable = false)
   private String subject;

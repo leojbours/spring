@@ -8,13 +8,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
-import java.time.Instant;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "companies")
-@Data
-public class Company {
+@Getter @Setter
+public class Company extends BaseEntity {
 
   @Id()
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,16 +51,4 @@ public class Company {
 
   @Column(name = "website", length = 500)
   private String website;
-
-  @Column(name = "created_at", nullable = false)
-  private Instant createdAt;
-
-  @Column(name = "created_by", nullable = false, length = 20)
-  private String createdBy;
-
-  @Column(name = "updated_at")
-  private Instant updatedAt;
-
-  @Column(name = "updated_by", length = 20)
-  private String updatedBy;
 }
